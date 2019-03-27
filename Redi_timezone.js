@@ -19,7 +19,7 @@ function handleCurrentLocation(location) {
 }
 
 async function timeZone(lat, lng) {
-    let url = "http://api.timezonedb.com/v2.1/get-time-zone?key=8AJ12SKT3BSQ&format=json&by=position&lat=" + lat + "&lng=" + lng;
+    let url = "http://api.timezonedb.com/v2.1/get-time-zone?key=$[YOUNEEDKEY]&format=json&by=position&lat=" + lat + "&lng=" + lng;
 
     let res = await fetch(url);
     let reply = await res.json();
@@ -44,7 +44,7 @@ async function friendTimeZoneResult(){
     let friendTimeZoneElement = document.getElementById("countryList");
     let friendTimeZoneResult = friendTimeZoneElement.value;
     console.log(friendTimeZoneResult);
-    let url = "http://api.timezonedb.com/v2.1/get-time-zone?key=8AJ12SKT3BSQ&format=json&by=zone&zone=" + friendTimeZoneResult;
+    let url = "http://api.timezonedb.com/v2.1/get-time-zone?key=$[YOUNEEDKEY]&format=json&by=zone&zone=" + friendTimeZoneResult;
 
     let res = await fetch(url);
     let reply = await res.json();
